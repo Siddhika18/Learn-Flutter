@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter1/pages/home_page.dart';
 
 void main() {
   runApp(MyAp());
@@ -10,12 +11,12 @@ class MyAp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Material(
-      child: Center(
-        child: Container(
-          child: Text("Hello Sid!"),
-        ),
+      home: Homepage(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.purple),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
       ),
-    ));
+    );
   }
 }
